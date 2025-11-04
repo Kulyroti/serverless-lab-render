@@ -58,3 +58,6 @@ if conn:
 
             messages = [{"id": r[0], "text": r[1], "time": r[2].isoformat()} for r in rows]
             return jsonify(messages)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
